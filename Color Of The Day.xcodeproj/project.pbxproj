@@ -216,6 +216,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Philip Heinser";
 				TargetAttributes = {
+					8D1D0247197F29B80038AE6F = {
+						DevelopmentTeam = 6BS59SC942;
+					};
 					8D1D026B197F29B90038AE6F = {
 						TestTargetID = 8D1D0247197F29B80038AE6F;
 					};
@@ -405,10 +408,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Color Of The Day/Color Of The Day-Prefix.pch";
 				INFOPLIST_FILE = "Color Of The Day/Color Of The Day-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E51828DB-E71B-429C-9392-4F5937F958F9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -418,10 +423,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Color Of The Day/Color Of The Day-Prefix.pch";
 				INFOPLIST_FILE = "Color Of The Day/Color Of The Day-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E51828DB-E71B-429C-9392-4F5937F958F9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
