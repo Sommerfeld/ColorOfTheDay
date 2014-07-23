@@ -43,6 +43,12 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    // resize your layers based on the view’s new bounds
+    self.backgroundLayer.frame = self.view.bounds;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -71,9 +77,12 @@
     UIColor* lighterColor = [JSColor lighterColorForColor:mainColor];
     UIColor* darkerColor = [JSColor darkerColorForColor:mainColor];
     
-    self.backgroundLayer.colors = @[(id)lighterColor.CGColor, (id)darkerColor.CGColor];
-    
-    [self.view.layer insertSublayer:self.backgroundLayer atIndex:0];
+    if (lighterColor && darkerColor) {
+        self.backgroundLayer.colors = @[(id)lighterColor.CGColor, (id)darkerColor.CGColor];
+        
+        [self.view.layer insertSublayer:self.backgroundLayer atIndex:0];
+    }
+
 }
 
 
