@@ -8,6 +8,8 @@
 
 #import "JSAppDelegate.h"
 
+#import "JSColor.h"
+
 @implementation JSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -36,6 +38,10 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [JSColor getColorOfTheDayFromServer];
+    });
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

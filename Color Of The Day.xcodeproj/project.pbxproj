@@ -22,6 +22,7 @@
 		8D1D0270197F29B90038AE6F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1D024F197F29B90038AE6F /* UIKit.framework */; };
 		8D1D0278197F29B90038AE6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D1D0276197F29B90038AE6F /* InfoPlist.strings */; };
 		8D1D027A197F29B90038AE6F /* Color_Of_The_DayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D0279197F29B90038AE6F /* Color_Of_The_DayTests.m */; };
+		8D1D0286197F2D350038AE6F /* JSColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1D0285197F2D350038AE6F /* JSColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		8D1D0275197F29B90038AE6F /* Color Of The DayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Color Of The DayTests-Info.plist"; sourceTree = "<group>"; };
 		8D1D0277197F29B90038AE6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8D1D0279197F29B90038AE6F /* Color_Of_The_DayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Color_Of_The_DayTests.m; sourceTree = "<group>"; };
+		8D1D0284197F2D350038AE6F /* JSColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSColor.h; sourceTree = "<group>"; };
+		8D1D0285197F2D350038AE6F /* JSColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSColor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 		8D1D0251197F29B90038AE6F /* Color Of The Day */ = {
 			isa = PBXGroup;
 			children = (
+				8D1D0283197F2D100038AE6F /* Models */,
 				8D1D025A197F29B90038AE6F /* JSAppDelegate.h */,
 				8D1D025B197F29B90038AE6F /* JSAppDelegate.m */,
 				8D1D025D197F29B90038AE6F /* Main_iPhone.storyboard */,
@@ -153,6 +157,15 @@
 				8D1D0276197F29B90038AE6F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8D1D0283197F2D100038AE6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D1D0284197F2D350038AE6F /* JSColor.h */,
+				8D1D0285197F2D350038AE6F /* JSColor.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D1D0286197F2D350038AE6F /* JSColor.m in Sources */,
 				8D1D0258197F29B90038AE6F /* main.m in Sources */,
 				8D1D0265197F29B90038AE6F /* JSViewController.m in Sources */,
 				8D1D025C197F29B90038AE6F /* JSAppDelegate.m in Sources */,
