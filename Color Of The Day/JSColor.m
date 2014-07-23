@@ -15,7 +15,12 @@
 - (UIColor *)colorOfTheDay
 {
     if (!_colorOfTheDay) {
-        _colorOfTheDay = [NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:lastColorOfTheDay]];
+        
+        NSData *colorArchiveData = [[NSUserDefaults standardUserDefaults] objectForKey:lastColorOfTheDay];
+        
+        if (colorArchiveData) {
+            _colorOfTheDay = [NSKeyedUnarchiver unarchiveObjectWithData:colorArchiveData];
+        }
     }
     
     return _colorOfTheDay;

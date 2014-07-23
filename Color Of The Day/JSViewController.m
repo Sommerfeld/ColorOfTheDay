@@ -71,9 +71,12 @@
     UIColor* lighterColor = [JSColor lighterColorForColor:mainColor];
     UIColor* darkerColor = [JSColor darkerColorForColor:mainColor];
     
-    self.backgroundLayer.colors = @[(id)lighterColor.CGColor, (id)darkerColor.CGColor];
-    
-    [self.view.layer insertSublayer:self.backgroundLayer atIndex:0];
+    if (lighterColor && darkerColor) {
+        self.backgroundLayer.colors = @[(id)lighterColor.CGColor, (id)darkerColor.CGColor];
+        
+        [self.view.layer insertSublayer:self.backgroundLayer atIndex:0];
+    }
+
 }
 
 
